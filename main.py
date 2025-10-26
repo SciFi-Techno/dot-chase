@@ -28,13 +28,13 @@ while not pr.window_should_close():
     # While game is not over
     if not game_over:
         # Player movements
-        if pr.is_key_down(pr.KeyboardKey.KEY_LEFT):
+        if pr.is_key_down(pr.KeyboardKey.KEY_LEFT) or pr.is_key_down(pr.KeyboardKey.KEY_A):
             player.update_position_x("-")
-        elif pr.is_key_down(pr.KeyboardKey.KEY_RIGHT):
+        elif pr.is_key_down(pr.KeyboardKey.KEY_RIGHT) or pr.is_key_down(pr.KeyboardKey.KEY_D):
             player.update_position_x("+")
-        elif pr.is_key_down(pr.KeyboardKey.KEY_UP):
+        elif pr.is_key_down(pr.KeyboardKey.KEY_UP) or pr.is_key_down(pr.KeyboardKey.KEY_W):
             player.update_position_y("-")
-        elif pr.is_key_down(pr.KeyboardKey.KEY_DOWN):
+        elif pr.is_key_down(pr.KeyboardKey.KEY_DOWN) or pr.is_key_down(pr.KeyboardKey.KEY_S):
             player.update_position_y("+")
 
         # Check if player collides with any of the dots
