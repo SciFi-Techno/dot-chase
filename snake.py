@@ -26,3 +26,9 @@ class Snake:
             self.position.y += self.speed
         elif operator == '-':
             self.position.y -= self.speed
+
+    def increase_speed(self):
+        self.speed += 1
+
+    def decrease_speed(self):
+        self.speed -= 2

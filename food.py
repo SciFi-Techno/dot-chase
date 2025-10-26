@@ -5,9 +5,13 @@ class Food:
         self.position = pr.Vector2(pr.get_random_value(0, pr.get_screen_width()),
                                    pr.get_random_value(47, pr.get_screen_height()))
         self.shape = pr.Vector2(15, 15)
+        self.type = pr.get_random_value(1, 2)
 
     def draw_shape(self):
-        pr.draw_rectangle_v(self.position, self.shape, pr.RED)
+        if self.type == 1:
+            pr.draw_rectangle_v(self.position, self.shape, pr.GREEN)
+        elif self.type == 2:
+            pr.draw_rectangle_v(self.position, self.shape, pr.RED)
 
     def get_position(self):
         return self.position
@@ -15,6 +19,10 @@ class Food:
     def get_shape(self):
         return self.shape
 
+    def get_type(self):
+        return self.type
+
     def update_position(self):
         self.position = pr.Vector2(pr.get_random_value(0, pr.get_screen_width()),
                                    pr.get_random_value(47, pr.get_screen_height()))
+        self.type = pr.get_random_value(1, 2)
